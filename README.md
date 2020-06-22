@@ -1,9 +1,37 @@
 # noncompact_u1
-C/C++ code to generate electro-quenched U1 fields for LQCD.
-
+C/C++ code to generate electro-quenched U1 fields for LQCD.  
 Original author: Michael G. Endres.
 
+- [Installation](#installation)
+- [Acknowledgements](#acknowledgements)
 
+
+## Installation
+
+### 1) To create the library edit the FFTWLIB flag in the files:  
+`scripts/compile/make_lib.sh`  
+and  
+`scripts/compile/make_bin.sh`  
+to point to where your FFTW library is located.
+
+Note that these files (along with scripts/compile/make_clean.sh) are my lazy alternative to using a Makefile; they will be used to compile the library and test/production programs.
+
+### 2) Next run:  
+`./scripts/compile/make_lib.sh`
+
+This should create the library file called noncompact_u1.a (as well as an obj directory containing some *.o files which were created during the comilation)
+
+### 3) To compile one of the test programs, ENTER the test program directory, e.g.,  
+`cd tests/gauge_invariance/`  
+and then run the script:  
+`../../scripts/compile/make_bin.sh main.C`  
+This will create your new binary called a.out
+
+### 4 To run the test program, type:
+
+./a.out
+
+### 5) Production code is compiled and run similarly to test code
 
 ## Acknowledgements
 If you use this code, please cite
