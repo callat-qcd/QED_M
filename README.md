@@ -1,8 +1,10 @@
 # noncompact_u1
 C/C++ code to generate electro-quenched U1 fields for LQCD.  
-Original author: Michael G. Endres.
+Original author: Michael G. Endres.  
+Porting to new repo: Ben Hoerz and Andre Walker-Loud
 
 - [Installation](#installation)
+- [Debugging](#debugging)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -32,6 +34,28 @@ This will create your new binary called a.out
 ./a.out
 
 ### 5) Production code is compiled and run similarly to test code
+
+
+## Debugging
+====DEBUGGING AND MEMORY USE====
+
+A useful tool for detecting memory leaks/use and profiling is valgrind (no recompilation of your code is required!):
+
+http://valgrind.org/
+
+Some of the tools included are:
+
+### 1) To profile memory use, run:  
+`valgrind --tool=massif ./a.out`  
+
+### 2) To detect memory leaks, access of unallocated memory locations, etc.,, run:  
+`valgrind --leak-check=yes ./a.out`
+
+### 3) Profiling can be done with  
+`valgrind --tool=callgrind ./a.out`  
+`callgrind_annotate [options] callgrind.out.<pid>`
+
+
 
 ## Acknowledgements
 If you use this code, please cite
