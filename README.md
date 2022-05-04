@@ -6,7 +6,9 @@ Porting to new repo: Ben Hoerz and Andre Walker-Loud
 - [Installation](#installation)
 - [Debugging](#debugging)
 - [Acknowledgements](#acknowledgements)
+- [Copyright Notice](#copyright-notice)
 
+NOTE: we are working on an upgrade that will use `cmake` and enable command line choices for input parameters, such as the lattice volume, photon mass, etc.
 
 ## Installation
 
