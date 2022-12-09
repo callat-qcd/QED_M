@@ -1,4 +1,4 @@
-# noncompact_u1
+# ${\rm QED}_{\rm M}$ $U_1$ background field generator
 C/C++ code to generate electro-quenched U1 fields for LQCD.  
 Original author: Michael G. Endres.  
 Porting to new repo: Ben Hoerz and Andre Walker-Loud
